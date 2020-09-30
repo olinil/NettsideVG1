@@ -5,6 +5,8 @@ body{
 
 }
 
+
+
 .main {
     display: grid;
     grid-row-gap: 5px;
@@ -91,7 +93,7 @@ min-height: 200px;
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #edf3f8;
+    background-color: #ffffff;
     min-width: 160px;
     overflow: visible;
   }
@@ -122,11 +124,20 @@ min-height: 200px;
 
 
 
-/*bilde*/
-    .bilde {
-    overflow: hidden;
-    background-color: #0559a2;
-    grid-column: 2/12;
-    margin-top: 10px;
-    z-index: 0;
-    }
+/*Bildekarusell*/
+.Bildekarusell {
+    animation-name: Bildekarusell;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    grid-column: 1/6;
+    min-height: 300px;
+    border-radius: 25px;
+}
+
+@keyframes Bildekarusell
+{
+25%   {background-image: url(../Bilder/bildekarusell_bilde_1.png);}
+50%  {background-image: url(../Bilder/bildekarusell_bilde_2.png);}
+75%   {background-image: url(../Bilder/bildekarusell_bilde_3.png);}
+100%  {background-image: url(../Bilder/bildekarusell_bilde_4.png);}
+}
