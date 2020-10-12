@@ -2,7 +2,7 @@ body{
     background-color: #edf3f8;
     font-family: Arial, Helvetica, sans-serif;
     z-index: 0;
-
+margin: 0%;
 }
 
 
@@ -21,7 +21,7 @@ body{
 /*Topp*/
 .topp {
 grid-column: 1/13;
-grid-row: 1/3;
+grid-row: 1/2;
 display:grid;
 grid-row-gap: 5px;
 grid-column-gap: 30px;
@@ -35,6 +35,7 @@ min-height: 200px;
     .vaapen {
     grid-column: 1/2;
     grid-row: 1/1;
+    margin-left: 20px;
 }
 
 
@@ -96,6 +97,7 @@ min-height: 200px;
     background-color: #ffffff;
     min-width: 160px;
     overflow: visible;
+    box-shadow: 10px 10px 5px grey;
   }
   
   .dropdown-content a {
@@ -116,9 +118,10 @@ min-height: 200px;
 
 /*Bolge*/
     .bolge {
-    grid-column: 1/13;
+    grid-column: 1/13; /*Column grids*/
     overflow: hidden;
     height: 2cm;
+    max-width: 100%;
     z-index: 0;
 }
 
@@ -126,18 +129,32 @@ min-height: 200px;
 
 /*Bildekarusell*/
 .Bildekarusell {
-    animation-name: Bildekarusell;
-    animation-duration: 40s;
-    animation-iteration-count: infinite;
-    grid-column: 1/6;
-    min-height: 300px;
-    border-radius: 25px;
+    animation-name: Bildekarusell; /*animasjons navn*/
+    animation-duration: 20s; /*Hvor lenge hele animasjonen skal vare*/
+    animation-iteration-count: infinite; /*Animasjonen skal vare evig*/
+    grid-column: 1/13; /*Column grids*/
+    margin-left: 25px;
+    /*Størrelse*/
+    min-width: 1200px;
+    max-width: 1200px;
+    min-height: 400px;
+    max-height: 400px;
+    animation-delay: 2s;
 }
 
 @keyframes Bildekarusell
-{
-25%   {background-image: url(../Bilder/bildekarusell_bilde_1.png);}
-50%  {background-image: url(../Bilder/bildekarusell_bilde_2.png);}
-75%   {background-image: url(../Bilder/bildekarusell_bilde_3.png);}
-100%  {background-image: url(../Bilder/bildekarusell_bilde_4.png);}
+/*Tid som hver animasjon har*/ {
+25%   {background-image: url(../Bilder/bilde_1.png);}
+50%  {background-image: url(../Bilder/bilde_2.png);}
+75%   {background-image: url(../Bilder/bilde_3.png);}
+100%  {background-image: url(../Bilder/bilde_4.png);}
+}
+
+
+
+.p1 {
+    text-align: left;
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
 }
